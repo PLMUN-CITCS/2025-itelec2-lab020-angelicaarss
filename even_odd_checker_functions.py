@@ -1,14 +1,16 @@
-# First, let's ask the person for a number
 print("Enter an integer:")
-number_text = input()
+user_input = input()
 
-# Now, let's turn that text into a real number
-number = int(number_text)
+# Let's try to turn it into a number
+try:
+  number = int(user_input)
 
-# Let's see if the number is even or odd
-if number % 2 == 0:
-  # It's even!
-  print(number, "is an Even number.")  # Corrected output string
-else:
-  # It's odd!
-  print(number, "is an Odd number.")   # Corrected output string
+  # Now, check if it's even or odd
+  if number % 2 == 0:
+    print(number, "is an Even number.")
+  else:
+    print(number, "is an Odd number.")
+
+# If they didn't type a number...
+except:
+  print("That's not a number! Try again.")
