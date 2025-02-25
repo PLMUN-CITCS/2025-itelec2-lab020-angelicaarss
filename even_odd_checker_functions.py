@@ -8,7 +8,7 @@ number = int(number_text)
 # Let's see if the number is even or odd
 if number % 2 == 0:
   # It's even!
-  print(number, "is an Even number.")
+  print(number, "is an Even number.")  # Corrected output string
 else:
   # It's odd!
-  print(number, "is an Odd number.")
+  print(number, "is an Odd number.")   # Corrected output string
