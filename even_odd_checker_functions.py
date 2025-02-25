@@ -1,16 +1,26 @@
-print("Enter an integer:")
-user_input = input()
+def get_integer_input():
+    """Gets an integer from the user."""
+    while True:
+        try:
+            user_input = input("Enter an integer: ")
+            number = int(user_input)
+            return number
+        except ValueError:
+            print("That's not a whole number. Try again.")
 
-# Let's try to turn it into a number
-try:
-  number = int(user_input)
+def check_even_odd(number):
+    """Checks if a number is even or odd."""
+    if number % 2 == 0:
+        message = str(number) + " is an Even number."
+    else:
+        message = str(number) + " is an Odd number."
+    return message
 
-  # Now, check if it's even or odd
-  if number % 2 == 0:
-    print(number, "is an Even number.")
-  else:
-    print(number, "is an Odd number.")
+def main():
+    """Main function to run the program."""
+    the_number = get_integer_input()
+    result = check_even_odd(the_number)
+    print(result)
 
-# If they didn't type a number...
-except:
-  print("That's not a number! Try again.")
+if __name__ == "__main__":
+    main()
